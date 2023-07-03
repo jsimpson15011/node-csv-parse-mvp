@@ -17,5 +17,5 @@ jobs:
           script: |
             mkdir test
             cd test
-            git clone git@github.com:jsimpson15011/node-csv-parse-mvp
+            git clone git@github.com:jsimpson15011/node-csv-parse-mvp.git
             echo 'Deployment success'

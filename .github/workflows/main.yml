@@ -15,7 +15,9 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
 
           script: |
-            mkdir test
-            cd test
+            mkdir csv-parse
+            cd csv-parse
             git clone https://github.com/jsimpson15011/node-csv-parse-mvp.git
+            cd node-csv-parse-mvp
+            npm install
             echo 'Deployment success'

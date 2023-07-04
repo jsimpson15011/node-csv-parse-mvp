@@ -20,4 +20,5 @@ jobs:
             git clone https://github.com/jsimpson15011/node-csv-parse-mvp.git
             cd node-csv-parse-mvp
             npm install
+            pm2 restart csv-parse
             echo 'Deployment success'

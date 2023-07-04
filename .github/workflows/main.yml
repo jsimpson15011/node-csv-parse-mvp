@@ -17,6 +17,7 @@ jobs:
           script: |
             mkdir dev-repos
             cd dev-repos
+            rm -rf node-csv-parse-mvp
             git clone https://github.com/jsimpson15011/node-csv-parse-mvp.git
             cd node-csv-parse-mvp
             npm install

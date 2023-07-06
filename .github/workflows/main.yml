@@ -22,5 +22,5 @@ jobs:
             cd node-csv-parse-mvp
             npm install
             cd ../
-            pm2 restart node-csv-parse-mvp --update-env
+            pm2 restart all --update-env
             echo 'Deployment success'

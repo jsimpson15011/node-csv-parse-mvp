@@ -1,7 +1,7 @@
-var express = require('express');
-var router = express.Router();
-const fs = require("fs");
-const csv=require('csvtojson')
+const express = require('express');
+const router = express.Router();
+const csv=require('csvtojson');
+const crypto = require('crypto');
 
 
 /* Upload csv and get back a JSON representation */
@@ -15,7 +15,9 @@ router.post('/', function(req, res, next) {
         for(const [key, value] of Object.entries(row)){
           const updatedKey = key.replaceAll(" ","_");
           normalizedRow[updatedKey] = value;
+          normalizedRow[updatedKey].id = crypto.randomUUID();
         }
+        normalizedRow.id = crypto.randomUUID();
         normalizedArray[i] = normalizedRow;
       });
 

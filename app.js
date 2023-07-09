@@ -7,7 +7,6 @@ var cors = require('cors');
 var fileUpload = require('express-fileupload');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 var csvRouter = require('./routes/csv');
 
 var app = express();
@@ -30,7 +29,6 @@ app.use(fileUpload({
 
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/csv', csvRouter);
 
 // catch 404 and forward to error handler

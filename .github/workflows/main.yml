@@ -21,6 +21,6 @@ jobs:
             cd node-csv-parse-mvp
             npm install
             cd ../
-            pm2 restart ecosystem.config.js
+            pm2 restart csv-parse.json
             pm2 save
             echo 'Deployment success'
